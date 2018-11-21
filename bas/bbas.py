@@ -3,22 +3,22 @@
 # @Author  : 河北雪域网络科技有限公司 A.Star
 # @contact: astar@snowland.ltd
 # @site: www.snowland.ltd
-# @file: rbas.py
-# @time: 2018/8/29 18:36
+# @file: bbas.py
+# @time: 2018/11/12 8:40
 # @Software: PyCharm
 
-
+from copy import deepcopy
 from slapy.swarm.bas import BASEngine
 import numpy as np
-from copy import deepcopy
 
 npr = np.random
 
 
-class RBASEngine(BASEngine):
+class BBAS(BASEngine):
     def __init__(self, steps=100, eps=0.01, chromosome=None, dim=2, bound=None, fitness_function=None, *,
                  fitness_value=-np.inf, init_method='random', step0=1, c=5, eta=0.95, **kwargs):
         """
+
         :param steps: 迭代次数
         :param eps: 精度
         :param chromosome: 数据值
@@ -34,6 +34,7 @@ class RBASEngine(BASEngine):
         """
         super().__init__(steps, eps, chromosome, dim, bound, fitness_function, fitness_value=fitness_value,
                          init_method=init_method, step0=step0, c=c, eta=eta, **kwargs)
+        raise FutureWarning('module will be supported in the future')
 
     def update(self, *args, **kwargs):
         d0 = self.step / self.c
@@ -54,5 +55,3 @@ class RBASEngine(BASEngine):
                 self.chromosome -= self.step * dir * np.sign(-fleft + fright)
 
         self.step *= self.eta
-
-RBAS = RBASEngine

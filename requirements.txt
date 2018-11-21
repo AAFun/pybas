@@ -1,1 +1,2 @@
-snowland-algorithm>=0.0.4
+snowland-algorithm==0.0.7
+numpy>=1.0.0

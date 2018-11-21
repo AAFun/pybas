@@ -15,8 +15,8 @@ import numpy as np
 
 
 # 使用前请安装文件
-# pip install snowland-algorithm
-# 确保版本号大于0.0.4
+# pip install pybas
+# 确保版本号大于0.0.1
 
 # 求 z = -cos(x) - sin(y)(x in [1, 2*pi], y in [1, 2*pi]) 的最大值
 
@@ -30,3 +30,4 @@ def fun(vars):
 
 bas = RBAS(fitness_function=fun, dim=2)
 bas.run()
+print(bas.gbest)

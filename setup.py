@@ -10,7 +10,7 @@
 # coding=utf-8
 
 from setuptools import setup, find_packages
-import slapy
+import bas
 
 setup(
     name="pybas",
@@ -20,13 +20,13 @@ setup(
     ),
     long_description=open('README.rst').read(),
     author='A.Star',
-    author_email='chenxiaolong12315@163.com',
+    author_email='astar@snowland.ltd',
     maintainer='A.Star',
-    maintainer_email='chenxiaolong12315@163.com',
+    maintainer_email='astar@snowland.ltd',
     license='BSD License',
     packages=find_packages(),
     platforms=["all"],
-    url='https://gitee.com/snowlandltd/snowland-algorithm-python',
+    url='',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
@@ -40,10 +40,11 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Libraries'
     ],
     install_requires=[
-        'numpy>=1.12.0',
-        'gaft>=0.5.4'
+        'snowland-algorithm==0.0.7',
+        'numpy>=1.0.0'
     ],
 )
