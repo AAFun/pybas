@@ -15,6 +15,10 @@ from copy import deepcopy
 npr = np.random
 
 
+
+# 模拟退火结合的BAS
+
+
 class RBASEngine(BASEngine):
     def __init__(self, steps=100, eps=0.01, chromosome=None, dim=2, bound=None, fitness_function=None, *,
                  fitness_value=-np.inf, init_method='random', step0=1, c=5, eta=0.95, **kwargs):

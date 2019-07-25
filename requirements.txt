@@ -1,2 +1,3 @@
-snowland-algorithm==0.0.7
+snowland-algorithm>=0.0.7
 numpy>=1.0.0
+astartool>=0.0.2

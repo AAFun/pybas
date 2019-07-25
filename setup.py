@@ -11,12 +11,14 @@
 
 from setuptools import setup, find_packages
 import bas
+from astartool.setuptool import load_install_requires
+
 
 setup(
     name="pybas",
     version=bas.__version__,
     description=(
-        'Python implementation algorithm'
+        'Beetle Antennae Search Algorithm for python 3.x'
     ),
     long_description=open('README.rst').read(),
     author='A.Star',
@@ -43,8 +45,5 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Libraries'
     ],
-    install_requires=[
-        'snowland-algorithm==0.0.7',
-        'numpy>=1.0.0'
-    ],
+    install_requires=load_install_requires(),
 )

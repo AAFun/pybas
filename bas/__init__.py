@@ -8,4 +8,11 @@
 # @Software: PyCharm
 
 from bas.rbas import RBAS
-__version__ = '0.0.1'
+from bas.bas import BAS
+
+from astartool.setuptool import get_version
+
+version = (0, 0, 2, 'final', 0)
+__version__ = get_version(version)
+
+del get_version
